@@ -58,6 +58,15 @@ function onDisconnect() {
 }
 
 /**
+ * Catch rate limiting process log.
+ */
+function onRateLimit() {
+  const msgRateLimit = config.logger.messages.onRateLimit;
+
+  logger.info(`[${getDateConfig()}] ${msgRateLimit}`);
+}
+
+/**
  * Catch onDirectMessage event process log.
  * @param {String} message
  * @param {String} reason
@@ -90,6 +99,7 @@ export default {
   onError,
   onReady,
   onDisconnect,
+  onRateLimit,
   onDirectMessage,
   onCommand
 };
