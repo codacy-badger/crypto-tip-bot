@@ -1,6 +1,6 @@
 import winston from 'winston';
 import moment from 'moment';
-import config from '../config';
+import config from './config/config';
 
 const logger = winston.createLogger({
   level: 'info',

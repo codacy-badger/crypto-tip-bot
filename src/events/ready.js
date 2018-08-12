@@ -1,5 +1,5 @@
 import fs from 'fs';
-import config from '../../config';
+import config from '../config/config';
 
 export async function run(client, logger) {
   // Load the configuration and instantiate it in the bot.

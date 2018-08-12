@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "config": "cp config.sample.js config.js",
+    "config": "cp src/config/config.sample.js src/config/config.js",
     "dev": "nodemon index.js --exec babel-node",
     "clean": "rm -rf build/ && mkdir build",
     "test": "npm run config && npm run lint",
-    "lint": "eslint index.js config.sample.js ./src *.js",
-    "lint:fix": "eslint --fix index.js config.sample.js ./src *.js",
-    "compile": "babel --ignore node_modules,package.json,package-lock.json,LICENSE,README.md,config.sample.js,logs ./ -d ./build --copy-files",
+    "lint": "eslint index.js src/config/config.sample.js ./src *.js",
+    "lint:fix": "eslint --fix index.js src/config/config.sample.js ./src *.js",
+    "compile": "babel --ignore node_modules,package.json,package-lock.json,LICENSE,README.md,src/config/config.sample.js,logs ./ -d ./build --copy-files",
     "build": "npm run clean && npm run compile",
     "start": "node ./build/index.js"
   },
