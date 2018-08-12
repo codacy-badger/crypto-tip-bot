@@ -1,0 +1,3 @@
+# crypto-tip-bot [![Build Status](https://travis-ci.org/Robiiinos/crypto-tip-bot.svg?branch=master)](https://travis-ci.org/Robiiinos/crypto-tip-bot) [![js-airbnb-style](https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg)](https://github.com/airbnb/javascript) [![dependencies Status](https://david-dm.org/Robiiinos/CryptoDonateBOT/status.svg)](https://david-dm.org/Robiiinos/crypto-tip-bot) [![devDependencies Status](https://david-dm.org/Robiiinos/CryptoDonateBOT/dev-status.svg)](https://david-dm.org/Robiiinos/crypto-tip-bot?type=dev)
+
+This Discord bot is made using [Discord.js](https://github.com/discordjs/discord.js) and works on NodeJS 8+.

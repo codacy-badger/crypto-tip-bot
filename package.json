@@ -1,0 +1,49 @@
+{
+  "name": "crypto-tip-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "config": "cp config.sample.js config.js",
+    "dev": "nodemon index.js --exec babel-node",
+    "clean": "rm -rf build/ && mkdir build",
+    "test": "npm run config && npm run lint",
+    "lint": "eslint index.js config.sample.js ./src *.js",
+    "lint:fix": "eslint --fix index.js config.sample.js ./src *.js",
+    "compile": "babel --ignore node_modules,package.json,package-lock.json,LICENSE,README.md,config.sample.js,logs ./ -d ./build --copy-files",
+    "build": "npm run clean && npm run compile",
+    "start": "node ./build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robiiinos/crypto-tip-bot.git"
+  },
+  "keywords": [
+    "discordjs",
+    "discord-bot",
+    "cryptocurrency"
+  ],
+  "author": "D. Robin <dyrda.robin@outlook.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Robiiinos/crypto-tip-bot/issues"
+  },
+  "homepage": "https://github.com/Robiiinos/crypto-tip-bot#readme",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "moment": "^2.22.2",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.6",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "nodemon": "^1.18.3"
+  }
+}
