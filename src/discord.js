@@ -13,7 +13,7 @@ const bAliases = new Discord.Collection();
 client.aliases = bAliases;
 
 /**
- * Login Discord Bot
+ * Login Discord Bot.
  * @returns {Promise}
  */
 function login() {

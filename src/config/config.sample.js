@@ -1,5 +1,19 @@
 export default {
   botToken: 'your_bot_token',
+  mongoDB: {
+    host: '127.0.0.1',
+    port: 27017,
+    database: 'crypto-tip-bot'
+  },
+  cryptocurrency: {
+    name: 'Bitcoin',
+    node: {
+      host: '127.0.0.1',
+      port: 8332,
+      username: 'Ulysseys',
+      password: 'YourSuperGreatPasswordNumber_DO_NOT_USE_THIS_OR_YOU_WILL_GET_ROBBED_385593'
+    }
+  },
 
   commands: {
     prefix: '!'

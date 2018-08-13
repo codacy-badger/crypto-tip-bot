@@ -1,6 +1,9 @@
 import fs from 'fs';
+import mongoose from './src/mongoose';
 import discord from './src/discord';
 import logger from './src/logger';
+
+mongoose.login();
 
 // Load the events folder and instantiate them in the bot.
 fs.readdir('./src/events/', (err, files) => {
