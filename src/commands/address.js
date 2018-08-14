@@ -18,26 +18,40 @@ export async function run(client, message) {
         }
       });
     } else {
-      jayson.getNewAddress((userADDRESS) => {
-        const User = UserModel({
-          userId: userID,
-          address: userADDRESS
-        });
+      message.channel.send({
+        embed: {
+          color: 16755456,
+          fields: [{
+            name: 'Your deposit address :',
+            value: 'Generating...'
+          }]
+        }
+      })
+        .then((msg) => {
+          jayson.getNewAddress((userADDRESS) => {
+            const User = UserModel({
+              userId: userID,
+              address: userADDRESS
+            });
 
-        User.save({ new: true }, (error, newUser) => {
-          if (error) throw error;
+            User.save({ new: true }, (error, newUser) => {
+              if (error) throw error;
 
-          message.channel.send({
-            embed: {
-              color: 6610199,
-              fields: [{
-                name: 'Your deposit address :',
-                value: newUser.address
-              }]
-            }
+              msg.delete()
+                .then(
+                  message.channel.send({
+                    embed: {
+                      color: 6610199,
+                      fields: [{
+                        name: 'Your deposit address :',
+                        value: newUser.address
+                      }]
+                    }
+                  })
+                );
+            });
           });
         });
-      });
     }
   });
 }
