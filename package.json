@@ -30,7 +30,6 @@
   },
   "homepage": "https://github.com/Robiiinos/crypto-tip-bot#readme",
   "dependencies": {
-    "bitcoinjs-lib": "^4.0.1",
     "discord.js": "^11.4.0",
     "jayson": "^2.0.6",
     "moment": "^2.22.2",
