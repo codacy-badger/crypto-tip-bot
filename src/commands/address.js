@@ -38,7 +38,7 @@ export async function run(client, message) {
               if (error) throw error;
 
               msg.delete()
-                .then(
+                .then(() => {
                   message.channel.send({
                     embed: {
                       color: 6610199,
@@ -47,8 +47,8 @@ export async function run(client, message) {
                         value: newUser.address
                       }]
                     }
-                  })
-                );
+                  });
+                });
             });
           });
         });
@@ -66,5 +66,5 @@ export const help = {
   name: 'address',
   description: 'Check your deposit address, and create one if none is found.',
   usage: 'address',
-  aliases: []
+  aliases: ['deposit']
 };
